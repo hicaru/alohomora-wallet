@@ -40,6 +40,12 @@ export default new Router({
       component: () => import('@/pages/Home')
     },
     {
+      path: '/send',
+      name: 'Send',
+      beforeEnter: guard,
+      component: () => import('@/pages/Send')
+    },
+    {
       path: '/settings',
       name: 'settings',
       beforeEnter: guard,
