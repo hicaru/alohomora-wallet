@@ -6,14 +6,18 @@ import router from './router'
 import store from './store'
 
 import HotKey from './directives/hotkey'
+import ClickOutSide from './directives/click-outside'
 
-if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
+if (!process.env.IS_WEB) {
+  Vue.use(require('vue-electron'))
+}
+
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
 Vue.use(HotKey)
+Vue.use(ClickOutSide)
 
-/* eslint-disable no-new */
 new Vue({
   components: { App },
   router,
