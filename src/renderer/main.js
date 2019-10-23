@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import axios from 'axios'
+import VueBemCn from 'vue-bem-cn'
 
 import App from './App'
 import router from './router'
@@ -7,6 +8,15 @@ import store from './store'
 
 import HotKey from './directives/hotkey'
 import ClickOutSide from './directives/click-outside'
+
+const bemConfig = {
+  delimiters: {
+    ns: '', // namespace
+    el: '__', // element delimeter
+    mod: '_', // modifier delimeter
+    modVal: '-' // value delimeter for modifier
+  }
+}
 
 if (!process.env.IS_WEB) {
   Vue.use(require('vue-electron'))
@@ -17,6 +27,7 @@ Vue.config.productionTip = false
 
 Vue.use(HotKey)
 Vue.use(ClickOutSide)
+Vue.use(VueBemCn, bemConfig)
 
 new Vue({
   components: { App },

@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div :class="b()">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'grinhole'
+    name: 'App'
   }
 </script>
 
