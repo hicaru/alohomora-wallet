@@ -1,0 +1,23 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+$xs-break: 400px   !default;
+$sm-break: 576px   !default;
+$md-break: 768px   !default;
+$lg-break: 992px   !default;
+$xl-break: 1200px  !default;
+$xll-break: 1392px !default;
+
+// Color system
+$black:     #000000 !default;
+$white:     #FFFFFF !default;
+$gray:      #434A54 !default;
+$gray-base: #40464F !default;
+
+$primary:         #4F9FD9 !default;
+$success:         #90C65C !default;
+$info:            #C5E6FA !default;
+$warning:         #FEC029 !default;
+$danger:          #F25D2D !default;
