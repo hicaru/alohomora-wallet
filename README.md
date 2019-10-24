@@ -4,7 +4,7 @@
 [![Gitter chat](http://img.shields.io/badge/chat-on%20gitter-077a8f.svg)](https://gitter.im/grin_community/Lobby)
 
 <p align="center">
-  <a href="https://grin.mw/"><img src="https://github.com/lich666dead/grinhole/raw/master/src/renderer/assets/grin_mw_logo.svg" width="200" height="200"></a>
+  <a href="https://grin.mw/"><img src="https://github.com/lich666dead/grinhole/blob/master/src/renderer/assets/grin_mw_logo.svg" width="200" height="200"></a>
 </p>
 
 > Grinhole is GUI wallet for grin blockchain.
