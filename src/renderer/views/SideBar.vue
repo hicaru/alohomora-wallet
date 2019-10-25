@@ -1,7 +1,7 @@
 <template>
   <div :class="b()">
     <Container :class="b('container')">
-      <Row :class="b('row')">
+      <Row :class="b('row', { icons: true })">
         <Icon
           :class="b('icon')"
         />
@@ -10,9 +10,12 @@
           src="/static/icons/shape.svg"
         />
       </Row>
-      <Row :class="b('row')">
-        <SwitchButton />
-      </Row>
+      <Column :class="b('column')">
+        <SwitchButton
+          round
+          :texts="texts"
+        />
+      </Column>
     </Container>
   </div>
 </template>
@@ -22,6 +25,7 @@ import variants from '@/configs/variants'
 
 import Container from '@/components/grids/Container'
 import Row from '@/components/grids/Row'
+import Column from '@/components/grids/Column'
 import Icon from '@/components/Icon'
 import SwitchButton from '@/components/SwitchButton'
 
@@ -29,13 +33,15 @@ export default {
   name: 'SideBar',
   components: {
     Row,
+    Column,
     Container,
     Icon,
     SwitchButton
   },
   data () {
     return {
-      variants
+      variants,
+      texts: ['Accounts', 'Contacts']
     }
   }
 }
@@ -64,7 +70,17 @@ $container-indent: 30px !default;
   }
 
   &__row {
+    margin-top: 4px;
     justify-content: space-between;
+
+    &_icons {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__column {
+    margin-top: 34px;
   }
 }
 </style>

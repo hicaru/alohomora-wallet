@@ -2,6 +2,7 @@
   <button
     :class="b({ block, sm, md, variant, outline, round })"
     :disabled="disabled"
+    @click="$emit('click')"
   >
     <slot />
   </button>
@@ -103,7 +104,7 @@ export default {
 
   &_variant-white {
     background-color: $white;
-    border: 1px solid $white;
+    border: 1px solid $black;
     color: $black;
   }
 

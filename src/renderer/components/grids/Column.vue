@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/styles/_mixins";
 
+.Column {
+  @include flexbox;
+  @include flex-direction(column);
+}
 </style>
