@@ -20,7 +20,4 @@ export default {
 @import "@/styles";
 @import "@/styles/_fonts";
 @import "@/styles/_general";
-
-.App {
-}
 </style>
