@@ -71,8 +71,9 @@ export default {
   }
 
   &_outline {
-    background-color: transparent;
-    border: 1px solid transparent;
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    color: $black;
   }
 
   // Scale. //

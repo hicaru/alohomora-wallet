@@ -11,7 +11,7 @@
         />
       </Row>
       <Row :class="b('row')">
-        <Button sm block>test</Button>
+        <Button sm block outline>test</Button>
       </Row>
     </Container>
   </div>
