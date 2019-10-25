@@ -14,6 +14,7 @@
         <Button
           md
           block
+          round
           :variant="variants.black"
         >
           test

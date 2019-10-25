@@ -14,7 +14,7 @@ import variants from '@/configs/variants'
  * @component Button.
  * @example
  * import variants from '@/configs/variants'
- * <Button sm block :variant="variants.danger">test</Button>
+ * <Button sm block round :variant="variants.danger">test</Button>
  */
 export default {
   name: 'Button',
@@ -42,6 +42,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    round: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -53,7 +57,10 @@ export default {
 
 .Button {
   cursor: pointer;
-  border-radius: .25rem;
+
+  &_round {
+    border-radius: .25rem;
+  }
   
   &_block {
     display: block;
