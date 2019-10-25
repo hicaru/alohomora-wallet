@@ -31,18 +31,6 @@ export default {
       type: Boolean,
       default: false
     },
-    lg: {
-      type: Boolean,
-      default: false
-    },
-    xl: {
-      type: Boolean,
-      default: false
-    },
-    xll: {
-      type: Boolean,
-      default: false
-    },
     variant: {
       type: String,
       default: variants.black
@@ -64,16 +52,19 @@ export default {
 @import "@/styles/_mixins";
 
 .Button {
+  cursor: pointer;
   border-radius: .25rem;
   
   &_block {
     display: block;
+
+    width: 100%;
+    height: 100%;
   }
 
   &_outline {
     background-color: transparent !important;
-    border: 1px solid transparent !important;
-    color: $black;
+    color: $black !important;
   }
 
   // Scale. //
@@ -84,7 +75,10 @@ export default {
   }
 
   &_md {
-
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    padding: .35rem 2.75rem;
   }
 
   // Colors. //
@@ -92,6 +86,18 @@ export default {
     background-color: $black;
     border: 1px solid $black;
     color: $white;
+  }
+
+  &_variant-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    color: $black;
+  }
+
+  &_variant-white {
+    background-color: $white;
+    border: 1px solid $white;
+    color: $black;
   }
 }
 </style>

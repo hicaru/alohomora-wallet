@@ -11,7 +11,13 @@
         />
       </Row>
       <Row :class="b('row')">
-        <Button sm block outline>test</Button>
+        <Button
+          md
+          block
+          :variant="variants.black"
+        >
+          test
+        </Button>
       </Row>
     </Container>
   </div>
