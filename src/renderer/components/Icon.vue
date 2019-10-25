@@ -1,13 +1,13 @@
 <template>
-  <div :class="b()"></div>
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Icon'
 }
 </script>
 
 <style lang="scss">
-@import "@/styles/_variables";
+
 </style>

@@ -9,14 +9,7 @@ import store from './store'
 import HotKey from './directives/hotkey'
 import ClickOutSide from './directives/click-outside'
 
-const bemConfig = {
-  delimiters: {
-    ns: '', // namespace
-    el: '__', // element delimeter
-    mod: '_', // modifier delimeter
-    modVal: '-' // value delimeter for modifier
-  }
-}
+import bemConfig from './configs/bem'
 
 if (!process.env.IS_WEB) {
   Vue.use(require('vue-electron'))

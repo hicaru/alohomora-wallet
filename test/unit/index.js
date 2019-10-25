@@ -1,4 +1,10 @@
 import Vue from 'vue'
+import VueBemCn from 'vue-bem-cn'
+
+import bemConfig from '@/configs/bem'
+
+Vue.use(VueBemCn, bemConfig)
+
 Vue.config.devtools = false
 Vue.config.productionTip = false
 

@@ -1,12 +1,18 @@
 <template>
   <div :class="b()">
+    <SideBar />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import SideBar from '@/views/SideBar'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    SideBar
+  }
 }
 </script>
 
@@ -14,4 +20,7 @@ export default {
 @import "@/styles";
 @import "@/styles/_fonts";
 @import "@/styles/_general";
+
+.App {
+}
 </style>
