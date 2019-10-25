@@ -11,7 +11,7 @@ export default new Router({
      * No guards routers.
      */
     {
-      path: '/',
+      path: '/preview',
       name: 'Preview',
       component: () => import('@/pages/Preview')
     },
