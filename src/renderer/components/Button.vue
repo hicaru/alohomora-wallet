@@ -106,5 +106,10 @@ export default {
     border: 1px solid $white;
     color: $black;
   }
+
+  &[disabled="disabled"] {
+    cursor: unset;
+    opacity: 0.5;
+  }
 }
 </style>

@@ -15,6 +15,7 @@
           md
           block
           round
+          disabled
           :variant="variants.black"
         >
           test
