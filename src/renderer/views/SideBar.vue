@@ -1,16 +1,20 @@
 <template>
   <div :class="b()">
-    <Row></Row>
+    <Row>
+      <Icon />
+    </Row>
   </div>
 </template>
 
 <script>
 import Row from '@/components/grids/Row'
+import Icon from '@/components/Icon'
 
 export default {
   name: 'SideBar',
   components: {
-    Row
+    Row,
+    Icon
   }
 }
 </script>
