@@ -11,15 +11,7 @@
         />
       </Row>
       <Row :class="b('row')">
-        <Button
-          md
-          block
-          round
-          disabled
-          :variant="variants.black"
-        >
-          test
-        </Button>
+        <SwitchButton />
       </Row>
     </Container>
   </div>
@@ -31,7 +23,7 @@ import variants from '@/configs/variants'
 import Container from '@/components/grids/Container'
 import Row from '@/components/grids/Row'
 import Icon from '@/components/Icon'
-import Button from '@/components/Button'
+import SwitchButton from '@/components/SwitchButton'
 
 export default {
   name: 'SideBar',
@@ -39,7 +31,7 @@ export default {
     Row,
     Container,
     Icon,
-    Button
+    SwitchButton
   },
   data () {
     return {

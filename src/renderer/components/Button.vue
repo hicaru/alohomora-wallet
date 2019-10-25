@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="b({ block, sm, md, variant, outline })"
+    :class="b({ block, sm, md, variant, outline, round })"
     :disabled="disabled"
   >
     <slot />
