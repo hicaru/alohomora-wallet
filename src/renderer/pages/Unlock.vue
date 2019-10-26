@@ -12,8 +12,23 @@
         </h3>
       </Row>
       <Row :class="b('row-form')">
-        <Column>
+        <Column :class="b('column-form')">
           <h1>Welcome back.</h1>
+          <Input
+            placeholder="Enter your password...."
+            round
+            md
+            block
+          />
+          <Button
+            :class="b('btn-form')"
+            :variant="variants.primary"
+            block
+            round
+            md
+          >
+            UNLOCK
+          </Button>
         </Column>
       </Row>
     </Container>
@@ -21,10 +36,14 @@
 </template>
 
 <script>
+import variants from '@/configs/variants'
+
 import Container from '@/components/grids/Container'
 import Row from '@/components/grids/Row'
 import Column from '@/components/grids/Column'
 import Icon from '@/components/Icon'
+import Input from '@/components/Input'
+import Button from '@/components/Button'
 
 export default {
   name: 'Unlock',
@@ -32,7 +51,14 @@ export default {
     Container,
     Row,
     Column,
-    Icon
+    Icon,
+    Input,
+    Button
+  },
+  data () {
+    return {
+      variants
+    }
   }
 }
 </script>
@@ -62,6 +88,14 @@ $container-indent: 5vw;
   &__row-form {
     height: 80vh;
     @include justify-content(center);
+  }
+
+  &__column-form {
+    max-width: 300px;
+  }
+
+  &__btn-form {
+    margin-top: 30px;
   }
 }
 </style>
