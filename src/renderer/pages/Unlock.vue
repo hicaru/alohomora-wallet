@@ -16,6 +16,7 @@
           <h1>Welcome back.</h1>
           <Input
             placeholder="Enter your password...."
+            type="password"
             round
             md
             block
