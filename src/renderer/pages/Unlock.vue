@@ -78,7 +78,7 @@ $container-indent: 5vw;
   }
 
   &__nav-items {
-    justify-content: space-between;
+    @include justify-content(space-between);
   }
 
   &__new-wallet {

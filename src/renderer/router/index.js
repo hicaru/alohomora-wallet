@@ -77,7 +77,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: '/unlock'
+      redirect: '/preview'
     }
   ]
 })
