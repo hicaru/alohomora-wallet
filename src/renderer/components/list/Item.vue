@@ -1,7 +1,7 @@
 <template>
   <Row :class="b({ pointer, selected, variant })">
     <Container :class="b('container')">
-      <Row :class="b('row')">
+      <Row :class="b('row', { border })">
         <slot />
       </Row>
     </Container>
@@ -12,6 +12,11 @@
 import variants from '@/configs/variants'
 import Container from '@/components/grids/Container'
 import Row from '@/components/grids/Row'
+
+export const borders = {
+  bottom: 'bottom',
+  top: 'top'
+}
 
 export default {
   name: 'Item',
@@ -31,6 +36,10 @@ export default {
     variant: {
       type: String,
       default: variants.black
+    },
+    border: {
+      type: String,
+      default: false
     }
   }
 }

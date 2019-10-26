@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import SideBar from '@/views/SideBar'
 
-describe('@/components/SideBar', () => {
+describe('@/views/SideBar', () => {
   it('should render correct contents', () => {
     const vm = new Vue({
       el: document.createElement('div'),

@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import SwitchButton from '@/views/SwitchButton'
+import TransactionsHistory from '@/views/TransactionsHistory'
 
-describe('@/components/SwitchButton', () => {
+describe('@/views/TransactionsHistory', () => {
   it('should render correct contents', () => {
     const vm = new Vue({
       el: document.createElement('div'),
-      render: h => h(SwitchButton)
+      render: h => h(TransactionsHistory)
     }).$mount()
 
     expect(vm).not.to.equal(null)

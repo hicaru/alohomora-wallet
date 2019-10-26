@@ -46,6 +46,7 @@ export default {
   }
 
   &__value {
+    font-family: Poppins-ExtraLight;
     font-weight: 300;
     font-size: 30px;
     line-height: 36px;

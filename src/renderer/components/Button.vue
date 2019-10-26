@@ -86,7 +86,7 @@ export default {
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    padding: .35rem 2.75rem;
+    padding: .75rem 4rem;
   }
 
   // Colors. //
