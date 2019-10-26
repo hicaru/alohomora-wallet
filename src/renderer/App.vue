@@ -1,11 +1,12 @@
 <template>
   <Row :class="b()">
-    <SideBar />
+    <SideBar v-show="wallet.enable" />
     <router-view></router-view>
   </Row>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import SideBar from '@/views/SideBar'
 import Row from '@/components/grids/Row'
 
@@ -14,6 +15,11 @@ export default {
   components: {
     SideBar,
     Row
+  },
+  computed: {
+    ...mapState([
+      'wallet'
+    ])
   }
 }
 </script>
