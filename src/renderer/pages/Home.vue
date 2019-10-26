@@ -45,7 +45,7 @@ $container-indent: 10vw;
   }
 
   &__tx-list {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 </style>

@@ -9,6 +9,9 @@
     <span :class="b('span')">
       {{ span }}
     </span>
+    <span :class="b('info')">
+      {{ info }}
+    </span>
   </Column>
 </template>
 
@@ -23,12 +26,15 @@ export default {
   props: {
     label: [String, Number],
     value: [String, Number],
-    span: [String, Number]
+    span: [String, Number],
+    info: [String, Number]
   }
 }
 </script>
 
 <style lang="scss">
+@import "@/styles/_variables";
+
 .Label {
   font-family: Poppins;
   font-style: normal;
@@ -38,15 +44,22 @@ export default {
     font-weight: 600;
   }
 
+  &__value,
+  &__info {
+    font-family: Poppins-ExtraLight;
+  }
+
+  &__info,
   &__label {
     font-size: 17px;
     line-height: 20px;
+  }
 
+  &__label {
     letter-spacing: -0.132812px;
   }
 
   &__value {
-    font-family: Poppins-ExtraLight;
     font-weight: 300;
     font-size: 30px;
     line-height: 36px;
@@ -55,6 +68,10 @@ export default {
   &__span {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  &__info {
+    color: lighten($black, 40%);
   }
 }
 </style>
