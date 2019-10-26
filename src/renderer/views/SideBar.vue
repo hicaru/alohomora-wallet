@@ -15,6 +15,20 @@
         />
       </Column>
     </Container>
+    <List>
+      <Item selected pointer>
+        <span>test</span>
+        <span>1</span>
+      </Item>
+      <Item pointer>
+        <span>test</span>
+        <span>2</span>
+      </Item>
+      <Item pointer>
+        <span>test</span>
+        <span>3</span>
+      </Item>
+    </List>
   </div>
 </template>
 
@@ -26,6 +40,8 @@ import Row from '@/components/grids/Row'
 import Column from '@/components/grids/Column'
 import Icon from '@/components/Icon'
 import SwitchButton from '@/components/SwitchButton'
+import List from '@/components/list/List'
+import Item from '@/components/list/Item'
 
 export default {
   name: 'SideBar',
@@ -34,7 +50,9 @@ export default {
     Column,
     Container,
     Icon,
-    SwitchButton
+    SwitchButton,
+    List,
+    Item
   },
   data () {
     return {
