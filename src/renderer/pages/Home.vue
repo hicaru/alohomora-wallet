@@ -5,7 +5,9 @@
         name="Savings"
         balance="3.0001"
       />
-      <TransactionsHistory />
+      <TransactionsHistory
+        :class="b('tx-list')"
+      />
     </Container>
   </div>
 </template>
@@ -40,6 +42,10 @@ $container-indent: 10vw;
     padding-top: 53px;
     padding-left: $container-indent;
     padding-right: $container-indent;
+  }
+
+  &__tx-list {
+    margin-top: 40px;
   }
 }
 </style>

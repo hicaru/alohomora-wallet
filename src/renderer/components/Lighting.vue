@@ -31,12 +31,12 @@ export default {
     border-radius: 50%;
   }
 
-  &_variant-success {
-    background-color: $success;
+  &_variant-danger {
+    background-color: $danger;
   }
 
   &_variant-success {
-    background-color: $danger;
+    background-color: $success;
   }
 }
 </style>
