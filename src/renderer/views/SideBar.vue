@@ -55,7 +55,7 @@ $container-indent: 30px !default;
 .SideBar {
   width: 100%;
   height: 100vh;
-  max-width: 320px;
+  max-width: 250px;
 
   background-color: $gray;
 
