@@ -21,6 +21,7 @@
         :key="item.id"
         :selected="accountSelected === index"
         pointer
+        padding
         @click.native="accountSelected = index"
       >
         <span>
@@ -30,7 +31,10 @@
           G{{ item.amount }}
         </span>
       </Item>
-      <Item pointer>
+      <Item
+        pointer
+        padding
+      >
         <Row :class="b('new-acc')">
           <Icon
             width="16" height="16"

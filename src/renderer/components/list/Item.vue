@@ -1,7 +1,7 @@
 <template>
   <Row :class="b({ pointer, selected, variant })">
-    <Container :class="b('container')">
-      <Row :class="b('row', { border })">
+    <Container :class="b('container', { padding })">
+      <Row :class="b('row')">
         <slot />
       </Row>
     </Container>
@@ -12,11 +12,6 @@
 import variants from '@/configs/variants'
 import Container from '@/components/grids/Container'
 import Row from '@/components/grids/Row'
-
-export const borders = {
-  bottom: 'bottom',
-  top: 'top'
-}
 
 export default {
   name: 'Item',
@@ -37,8 +32,8 @@ export default {
       type: String,
       default: variants.black
     },
-    border: {
-      type: String,
+    padding: {
+      type: Boolean,
       default: false
     }
   }
@@ -61,17 +56,19 @@ $container-indent: 20px;
   font-size: 18px;
   line-height: 28px;
 
-  &__container {
-    padding-left: $container-indent;
-    padding-right: $container-indent;
-  }
-
   &__row {
     @include justify-content(space-between);
   }
 
   &_pointer {
     cursor: pointer;
+  }
+
+  &__container {
+    &_padding {
+      padding-left: $container-indent;
+      padding-right: $container-indent;
+    }
   }
 
   #{if(&, '&_selected', '&_variant-black')} {

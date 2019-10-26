@@ -5,6 +5,7 @@
         name="Savings"
         balance="3.0001"
       />
+      <TransactionsHistory />
     </Container>
   </div>
 </template>
@@ -13,13 +14,15 @@
 import Container from '@/components/grids/Container'
 import Row from '@/components/grids/Row'
 import AccountInfo from '@/views/AccountInfo'
+import TransactionsHistory from '@/views/TransactionsHistory'
 
 export default {
   name: 'Home',
   components: {
     Container,
     Row,
-    AccountInfo
+    AccountInfo,
+    TransactionsHistory
   }
 }
 </script>
@@ -27,7 +30,7 @@ export default {
 <style lang="scss">
 @import "@/styles/_variables";
 
-$container-indent: 161px;
+$container-indent: 10vw;
 
 .Home {
   width: 100%;
