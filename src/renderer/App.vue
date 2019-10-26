@@ -1,6 +1,6 @@
 <template>
   <Row :class="b()">
-    <SideBar v-show="wallet.enable" />
+    <SideBar v-show="enable" />
     <router-view></router-view>
   </Row>
 </template>
@@ -17,8 +17,8 @@ export default {
     Row
   },
   computed: {
-    ...mapState([
-      'wallet'
+    ...mapState('wallet', [
+      'enable'
     ])
   }
 }
