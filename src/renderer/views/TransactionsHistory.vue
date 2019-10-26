@@ -8,7 +8,10 @@
         pointer
       />
     </Item>
-    <Item>test2</Item>
+    <Item>
+      <Lighting round />
+      <span>test</span>
+    </Item>
     <Item>test3</Item>
   </List>
 </template>
@@ -17,13 +20,15 @@
 import List from '@/components/list/List'
 import Item from '@/components/list/Item'
 import Icon from '@/components/Icon'
+import Lighting from '@/components/Lighting'
 
 export default {
   name: 'TransactionsHistory',
   components: {
     List,
     Item,
-    Icon
+    Icon,
+    Lighting
   }
 }
 </script>
