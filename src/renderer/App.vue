@@ -1,17 +1,19 @@
 <template>
-  <div :class="b()">
+  <Row :class="b()">
     <SideBar />
     <router-view></router-view>
-  </div>
+  </Row>
 </template>
 
 <script>
 import SideBar from '@/views/SideBar'
+import Row from '@/components/grids/Row'
 
 export default {
   name: 'App',
   components: {
-    SideBar
+    SideBar,
+    Row
   }
 }
 </script>
@@ -20,4 +22,9 @@ export default {
 @import "@/styles";
 @import "@/styles/_fonts";
 @import "@/styles/_general";
+@import "@/styles/_mixins";
+
+.App {
+  @include align-items(unset);
+}
 </style>
