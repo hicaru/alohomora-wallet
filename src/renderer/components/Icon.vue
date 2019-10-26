@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <img
-      :class="b()"
-      :src="src"
-      :height="height"
-      :width="width"
-    >
-  </div>
+  <img
+    :class="b({ pointer })"
+    :src="src"
+    :height="height"
+    :width="width"
+  >
 </template>
 
 <script>
@@ -24,11 +22,19 @@ export default {
     width: {
       type: String,
       default: '30'
+    },
+    pointer: {
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
 
 <style lang="scss">
-
+.Icon {
+  &_pointer {
+    cursor: pointer;
+  }
+}
 </style>

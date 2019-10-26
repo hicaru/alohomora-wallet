@@ -2,12 +2,10 @@
   <div :class="b()">
     <Container :class="b('container')">
       <Row :class="b('row', { icons: true })">
+        <Icon />
         <Icon
-          :class="b('icon')"
-        />
-        <Icon
-          :class="b('icon')"
           src="/static/icons/shape.svg"
+          pointer
         />
       </Row>
       <Column :class="b('column')">
@@ -60,10 +58,6 @@ $container-indent: 30px !default;
   background-color: $gray;
 
   border-right: 1px solid darken($gray, 6%);
-
-  &__icon {
-    cursor: pointer;
-  }
 
   &__container {
     padding: $container-indent $container-indent;
