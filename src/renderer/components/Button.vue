@@ -77,7 +77,7 @@ export default {
 
   // Scale. //
   &_sm {
-    padding: .375rem .75rem;
+    padding: .2rem .4rem;
     font-size: 1rem;
     line-height: 1.5;
   }

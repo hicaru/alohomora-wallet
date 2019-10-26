@@ -21,5 +21,6 @@ export default {
 
 .Row {
   @include flexbox;
+  @include align-items(center);
 }
 </style>

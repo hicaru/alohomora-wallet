@@ -1,7 +1,7 @@
 <template>
   <div :class="b()">
     <Container :class="b('container')">
-      <Row :class="b('row', { icons: true })">
+      <Row :class="b('row')">
         <Icon />
         <Icon
           src="/static/icons/shape.svg"
@@ -10,29 +10,43 @@
       </Row>
       <Column :class="b('column')">
         <SwitchButton
-          round
           :texts="texts"
+          round
         />
       </Column>
     </Container>
     <List>
-      <Item selected pointer>
-        <span>test</span>
-        <span>1</span>
+      <Item
+        v-for="(item, index) of accounts"
+        :key="item.id"
+        :selected="accountSelected === index"
+        pointer
+        @click.native="accountSelected = index"
+      >
+        <span>
+          {{ item.name }}
+        </span>
+        <span :class="b('list-item-amount', { gray: accountSelected !== index })">
+          G{{ item.amount }}
+        </span>
       </Item>
       <Item pointer>
-        <span>test</span>
-        <span>2</span>
-      </Item>
-      <Item pointer>
-        <span>test</span>
-        <span>3</span>
+        <Row :class="b('new-acc')">
+          <Icon
+            width="16" height="16"
+            src="/static/icons/union.svg"
+          />
+          <span :class="b('list-item-text')">
+            New account
+          </span>
+        </Row>
       </Item>
     </List>
   </div>
 </template>
 
 <script>
+import uuidv4 from 'uuidv4'
 import variants from '@/configs/variants'
 
 import Container from '@/components/grids/Container'
@@ -57,7 +71,25 @@ export default {
   data () {
     return {
       variants,
-      texts: ['Accounts', 'Contacts']
+      texts: ['Accounts', 'Contacts'],
+      accountSelected: 0,
+      accounts: [
+        {
+          id: uuidv4(),
+          name: 'Nyx assasin',
+          amount: 4.123
+        },
+        {
+          id: uuidv4(),
+          name: 'Arc warden',
+          amount: 3.03
+        },
+        {
+          id: uuidv4(),
+          name: 'Devourer',
+          amount: 10.1
+        }
+      ]
     }
   }
 }
@@ -65,6 +97,7 @@ export default {
 
 <style lang="scss">
 @import "@/styles/_variables";
+@import "@/styles/_mixins";
 
 $container-indent: 30px !default;
 
@@ -83,16 +116,21 @@ $container-indent: 30px !default;
 
   &__row {
     margin-top: 4px;
-    justify-content: space-between;
-
-    &_icons {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
+    @include justify-content(space-between);
   }
 
   &__column {
     margin-top: 34px;
+  }
+
+  &__list-item-text {
+    margin-left: 10px;
+  }
+
+  &__list-item-amount {
+    &_gray {
+      color: lighten($black, 40%);
+    }
   }
 }
 </style>

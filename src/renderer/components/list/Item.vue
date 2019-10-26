@@ -1,11 +1,11 @@
 <template>
-  <div :class="b({ pointer, selected, variant })">
+  <Row :class="b({ pointer, selected, variant })">
     <Container :class="b('container')">
       <Row :class="b('row')">
         <slot />
       </Row>
     </Container>
-  </div>
+  </Row>
 </template>
 
 <script>
@@ -46,8 +46,11 @@ $container-indent: 20px;
   width: 100%;
   height: 50px;
 
-  @include flexbox;
-  @include align-items(center);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
 
   &__container {
     padding-left: $container-indent;
@@ -55,7 +58,7 @@ $container-indent: 20px;
   }
 
   &__row {
-    justify-content: space-between;
+    @include justify-content(space-between);
   }
 
   &_pointer {
