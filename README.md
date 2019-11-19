@@ -1,4 +1,4 @@
-# grinhole
+# Accio-wallet
 
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Zilliqa/scilla/blob/master/LICENSE)
 [![Gitter chat](http://img.shields.io/badge/chat-on%20gitter-077a8f.svg)](https://gitter.im/grin_community/Lobby)
