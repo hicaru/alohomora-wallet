@@ -57,7 +57,14 @@
   "keywords": [
     "grin",
     "wallet",
-    "anonymity"
+    "anonymity",
+    "cryptocurrency",
+    "crypto",
+    "desktop",
+    "desktop-app",
+    "blockchain",
+    "grinwallet",
+    "mimblewimble"
   ],
   "husky": {
     "hooks": {
